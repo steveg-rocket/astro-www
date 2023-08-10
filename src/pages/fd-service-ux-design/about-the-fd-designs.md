@@ -12,7 +12,7 @@ class: fds
 While the Maneuvering and Reporting tools have not been researched, tested, and designed to the same depth as the Orbit Determination Tool, they have been considered throughout the research and design process from the broader perspective of the application.
 :::
 
-The FDS system supports missions that require communication between satellites and ground systems in order to estimate the position of a satellite, as well as perform any maneuvers to keep the satellite in a nominal position. Some key features of FDS include Orbit Determinations (OD), generating products (Ephemerides, TLE’s, reports, etc.), and Maneuvering, such as station keeping, conjunction assessment, and COLA’s (burns).
+The FDS system supports missions that require communication between satellites and ground systems in order to estimate the position of a satellite, as well as perform any maneuvers to keep the satellite in a nominal position. Some key features of FDS include Orbit Determinations (OD), generating products (Ephemerides, TLEs, reports, etc.), and Maneuvering, such as station keeping, conjunction assessment, and COLA’s (burns).
 (pdf)
 
 - [FD Design Specifications (pdf)](https://s3-us-west-2.amazonaws.com/com.rocketcom.astrouxds/downloads/fds-specifications.pdf)
@@ -32,7 +32,7 @@ The FDS system supports missions that require communication between satellites a
 
 **Maneuvering**:
 
-- Simulate station keeping, attitude control, conjunction assessments, and COLA’s to evaluate maneuver plans
+- Simulate station keeping, attitude control, conjunction assessments, and COLAs to evaluate maneuver plans
 - Generate necessary reports and products
 
 **Reporting**:
@@ -41,15 +41,15 @@ The FDS system supports missions that require communication between satellites a
 
 ## UX Research Findings
 
-### Inefficient and redundant tasks frustrate OA’s
+### Inefficient and redundant tasks frustrate OAs
 
-An efficient FDS application should automate redundant tasks for the operator, as well as create a unified experience across the enterprise, reducing the training time it takes for OA’s to learn the system and begin contributing meaningful work right away.
+An efficient FDS application should automate redundant tasks for the operator, as well as create a unified experience across the enterprise, reducing the training time it takes for OAs to learn the system and begin contributing meaningful work right away.
 
 UX research conducted in collaboration with users and domain experts on existing FDS workflows and systems identified the following:
 
 **Redundancy**:
 
-One of the biggest hurdles for OA’s was the inefficient repetitiveness in which their tasks are performed.
+One of the biggest hurdles for OAs was the inefficient repetitiveness in which their tasks are performed.
 
 **Pain Points**:
 
@@ -77,14 +77,14 @@ While some operations use older legacy systems to perform tasks like OASYS, othe
 **Operator training and retention**:
 
 - The training and onboarding time to learn these softwares can be very involved.
-- Just because an OA is trained, does not mean they are proficient. Often times OA’s are reassigned after just a few months and never fully get immersed enough to be able to contribute to the mission. This is why most advanced OA’s often times are contractors.
-- Some OA’s are hybrid TT&C operators, they may bounce through many different applications to perform tasks, each one with a different user experience and interface.
+- Just because an OA is trained, does not mean they are proficient. Often times OA’s are reassigned after just a few months and never fully get immersed enough to be able to contribute to the mission. This is why most advanced OAs often times are contractors.
+- Some OAs are hybrid TT&C operators, they may bounce through many different applications to perform tasks, each one with a different user experience and interface.
 
 **FDS Design Solution**:
 
-- **Using best practice UX Design**. Leveraging the ASTRO UX Design System allow operators from different missions to learn one set of user interface components. This helps onboard and train new OA’s to begin contributing to the mission immediately, as well as transitioning existing OA’s by allowing them to focus more on their mission and less on learning a new system.
+- **Using best practice UX Design**. Leveraging the ASTRO UX Design System allow operators from different missions to learn one set of user interface components. This helps onboard and train new OA’s to begin contributing to the mission immediately, as well as transitioning existing OAs by allowing them to focus more on their mission and less on learning a new system.
 - **Tabular Data and Visual Data**. While some users interviewed were more ‘data people,’ there was a strong desire to visualize the orbit through a 2d/3d simulation, as some operators understand and digest visual information more effectively. We identified areas of the application where this data existed and integrated more system flexibility by allowing an OA to switch views between tabular data and visual data.
-- **3rd party solutions**. Inspiration was drawn from the off-the-shelf products created for Flight Dynamics such as FreeFlyer and ODTK. We wanted to leverage the thinking behind these softwares that our users were partial to, while adhering to the unique capabilities of the FDS legacy software, OASYS. The FDS designs include customizable “Scenarios” that allow OA’s to create or pre-load any orbit determination type as well as generate any necessary products or reports with minimal effort.
+- **3rd party solutions**. Inspiration was drawn from the off-the-shelf products created for Flight Dynamics such as FreeFlyer and ODTK. We wanted to leverage the thinking behind these softwares that our users were partial to, while adhering to the unique capabilities of the FDS legacy software, OASYS. The FDS designs include customizable “Scenarios” that allow OAs to create or pre-load any orbit determination type as well as generate any necessary products or reports with minimal effort.
 - **Creating Utility Tool Kits**. Identify and abstract the key common features shared between the dispersed tool sets. This lead to the creation of Utility Tool Kits. Utility Tool Kits are temporary work environments for key subtasks such as filtering track data or propagating a satellite. User testing revealed that different missions do these in different order. By leaving the subtasks open and agnostic to the mission, users can approach orbit determinations in each of their unique ways.
 
 ## UX Design
@@ -99,7 +99,7 @@ Based on system requirements and user research, the architecture of the applicat
 
 ## FDS Orbit Determination
 
-For operators of the FDS Application, flexibility and automating redundant tasks are key. The FDS App supports missions and their unique work flows, as well as the customization of common scenarios, allowing OA’s to load and store attributes that are unique to each satellite, without having to reinvent the wheel each time.
+For operators of the FDS Application, flexibility and automating redundant tasks are key. The FDS App supports missions and their unique work flows, as well as the customization of common scenarios, allowing OAs to load and store attributes that are unique to each satellite, without having to reinvent the wheel each time.
 
 ### Global Status Bar
 
@@ -197,7 +197,7 @@ The Utility Tool Kit is a collection of contextual utilities for accessing secon
 2. **Create Report** - Allows operators to create reports that are contextual to the satellite and scenario.
 3. **Log** - Displays a log of application and system messages, including errors, informational messages and warnings.
 4. **Track Data** - Allows operators to select, edit, and filter raw tracking data and create processed track files.
-5. **Propagator** - Allows operators to create and visualize ephemerides and TLE’s.
+5. **Propagator** - Allows operators to create and visualize ephemerides and TLEs.
 
 ### Log Utility
 
