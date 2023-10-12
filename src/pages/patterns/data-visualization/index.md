@@ -185,7 +185,7 @@ The following sample color set is provided for the specified number of data poin
 The following sample color sets were created from the non-status color palettes:
 
 :::caution
-Status colors are reserved for their respected statuses. Do not apply them to Visualizations unless they reflect the defined status, e.g. Critical.
+Status colors are reserved for their respective statuses. Do not apply them to Visualizations unless they reflect the defined status, e.g. Critical.
 :::
 
 ![Blue Green color palette](/img/patterns/data-visualization/data-set-palette-blue-green.webp)
